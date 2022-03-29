@@ -1,0 +1,81 @@
+<nav class="orange">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">ADMIN</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isadminsAdd}}
+      <li class="active"><a href="/authorisationAdd">Добавить менеджера</a></li>
+      {{else}}
+      <li><a href="/authorisationAdd">Добавить менеджера</a></li>
+      {{/if}}
+
+      {{#if isCards}}
+      <li class="active"><a href="/cards">Карты</a></li>
+      {{else}}
+      <li><a href="/cards">Карты</a></li>
+      {{/if}}
+
+      {{#if isLising}}
+      <li class="active"><a href="/lising">Лизинги</a></li>
+      {{else}}
+      <li><a href="/lising">Лизинги</a></li>
+      {{/if}}
+
+      {{#if isCredit}}
+      <li class="active"><a href="/credits">Кредиты</a></li>
+      {{else}}
+      <li><a href="/credits">Кредиты</a></li>
+      {{/if}}
+
+      {{#if isContributions}}
+      <li class="active"><a href="/contributions">Вклады</a></li>
+      {{else}}
+      <li><a href="/contributions">Вклады</a></li>
+      {{/if}}
+
+      {{#if isConsult}}
+      <li class="active"><a href="/consult">Консультации</a></li>
+      {{else}}
+      <li><a href="/consult">Консультации</a></li>
+      {{/if}}
+
+      {{#if isConsultPop}}
+      <li class="active"><a href="/consultPop">Срочные консультации</a></li>
+      {{else}}
+      <li><a href="/consultPop">Срочные консультации</a></li>
+      {{/if}}
+
+
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Вклады</h1>
+
+  {{#if contributions.length}}
+  <ul>
+    {{#each contributions}}
+    <li class="card__applications">
+      <div>
+        <span class="cards__name">{{Name}}</span>
+        <span class="cards__phone">{{Phone}}</span>
+        <span class="cards__type">{{TypeOfCard}}</span>
+
+
+        <a href="tel:{{Phone}}" class="btn btn-small">Связаться</a>
+        <form action="deleteContr" method="post">
+          <input type="hidden" value="{{_id}}" name="id">
+          <button type="submit" class="btn btn-small">Просмотренно</button>
+        </form>
+
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+
+  {{else}}
+  <p>Нет заявок</p>
+  {{/if}}
+</div>

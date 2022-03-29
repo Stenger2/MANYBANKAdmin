@@ -1,0 +1,89 @@
+.card__applications{
+    margin-bottom: 1rem;
+}
+
+.card__applications{
+    z-index: 2;
+}
+
+.card__applications span.completed{
+    text-decoration: line-through;
+}
+
+
+.card__applications div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;  
+    background: #f3f3f3;
+}
+
+.card__applications span{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -.04em;
+    color: #323232;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 20px;
+}
+
+
+
+.form-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__title{
+    text-align: center;
+}
+
+.consult{
+    padding-bottom: 10px;
+}
+
+.form__bank{
+    pointer-events: none;
+}
+
+.eror__inner{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -.04em;
+    font-family: 'Roboto', sans-serif;
+    color: #262626;
+    padding-bottom: 20px;
+}
+
+.error-btn{
+    height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    border: 1px solid #000000;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.error-btn{
+    border-color: #ffc222;
+}
+
+.error_label{
+    display: none;
+}
